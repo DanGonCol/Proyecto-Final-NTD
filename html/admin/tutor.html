@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Administrador</title>
-  <link rel="stylesheet" href="../css/admin.css">
+  <title>Gestión de Tutores</title>
+  <link rel="stylesheet" href="/css/styles_general.css">
+
 </head>
 <body>
   <div class="container">
@@ -21,11 +22,17 @@
 
     <!-- Contenido dinámico -->
     <main class="content">
-      <section id="adminSection">
-        <h1>Bienvenido al Panel de Administración</h1>
-        <p>Seleccione una opción en el menú para comenzar a gestionar los datos.</p>
+      <section id="gestionTutores">
+        <h1>Gestión de Tutores</h1>
+        <div class="crud-actions">
+          <button onclick="getDocentes()">Listar Tutores</button>
+          <button onclick="updateDocente()">Actualizar Tutor</button>
+          <button onclick="deleteDocente()">Eliminar Tutor</button>
+        </div>
+        <div id="docentesResult" class="table-container"></div>
       </section>
     </main>
   </div>
+  <script src="/js/admin/docente.js"></script>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Usuarios</title>
+  <link rel="stylesheet" href="/css/styles_general.css">
+  
+</head>
+<body>
+  <div class="container">
+    <!-- Menú lateral -->
+    <nav class="sidebar">
+      <h3>Menú - BrainBuddies - ADMIN</h3>
+      <ul>
+        <li><a href="/html/admin/estudiante.html">Gestión de Usuarios</a></li>
+        <li><a href="/html/admin/tutor.html">Gestión de Tutores</a></li>
+        <li><a href="/html/admin/tutoria.html">Gestión de Tutorías</a></li>
+      </ul>
+      <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+    </nav>
+
+    <!-- Contenido dinámico -->
+    <main class="content">
+      <section id="gestionUsuarios">
+        <h1>Gestión de Usuarios</h1>
+        <div class="crud-actions">
+          <button onclick="getEstudiantes()">Listar Usuarios</button>
+          <button onclick="showUpdateUserForm()">Actualizar Usuario</button>
+          <button onclick="deleteEstudiante()">Eliminar Usuario</button>
+        </div>
+        <div id="estudiantesResult" class="table-container"></div>
+
+        <!-- Formulario de Actualización -->
+        <div id="editUserForm" style="display: none;">
+          <h2>Actualizar Estudiante</h2>
+          <form>
+            <label for="editUserId">ID:</label>
+            <input id="editUserId" type="text" readonly />
+
+            <label for="editUserNombre">Nombre:</label>
+            <input id="editUserNombre" type="text" placeholder="Nombre" required />
+
+            <label for="editUserApellido">Apellido:</label>
+            <input id="editUserApellido" type="text" placeholder="Apellido" required />
+
+            <label for="editUserEmail">Correo Electrónico:</label>
+            <input id="editUserEmail" type="email" placeholder="Correo" required />
+
+            <label for="editUserTelefono">Teléfono:</label>
+            <input id="editUserTelefono" type="text" placeholder="Teléfono" />
+
+            <button type="button" onclick="updateEstudiante()">Guardar Cambios</button>
+            <button type="button" onclick="cancelUpdate()">Cancelar</button>
+          </form>
+        </div>
+
+      </section>
+    </main>
+  </div>
+  <script src="/js/admin/estudiante.js"></script>
+</body>
+</html>
