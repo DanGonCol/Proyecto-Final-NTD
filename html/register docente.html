@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Tutor - App de Tutorías</title>
+  <link rel="stylesheet" href="../css/register.css">
+  <script src="../js/docente.js" defer></script>
+</head>
+
+<body>
+  <header class="main-title">
+    <h1>BrainBuddies - App de Tutorías</h1>
+  </header>
+  <div class="form-container">
+    <section class="form-login">
+      <h4>Formulario de Registro de Tutor</h4>
+      <!-- Campos del formulario -->
+      <input class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+      <input class="controls" type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+      <input class="controls" type="email" name="correo" id="correo" placeholder="Correo" required>
+      <input class="controls" type="text" name="materia" id="materia" placeholder="Materia" required>
+      <input class="controls" type="text" name="nivelEducativo" id="nivelEducativo" placeholder="Nivel Educativo (opcional)">
+      <input class="controls" type="password" name="password" id="password" placeholder="Contraseña" required>
+      <input class="controls" type="password" name="confirmar_password" id="confirmar_password" placeholder="Confirmar Contraseña" required>
+      <div class="button-group-bottom">
+        <!-- Botón de registro -->
+        <button class="botons" type="button" onclick="registrarDocente()">Registrar</button>
+      </div>
+      <p class="create-account-text">¿Ya tienes cuenta? <a href="seleccion inicio de sesion.html">Inicia sesión</a></p>
+    </section>
+  </div>
+</body>
+
+</html>

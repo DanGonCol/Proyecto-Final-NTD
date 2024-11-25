@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docente</title>
+  <link rel="stylesheet" href="../css/docente.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menú lateral -->
+    <nav class="sidebar">
+      <h3>Menú - BrainBuddies - TUTOR</h3>
+      <ul>
+        <li><a href="#" onclick="showSection('gestionCobros')">Gestión de Cobros</a></li>
+        <li><a href="#" onclick="showSection('gestionTutorias')">Gestión de Tutorías</a></li>
+      </ul>
+      <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+    </nav>
+
+    <!-- Contenido dinámico -->
+    <main class="content">
+      <section id="gestionCobros" class="section active">
+        <h1>Gestión de Cobros</h1>
+        <p>Aquí se podrán gestionar los cobros realizados.</p>
+      </section>
+      <section id="gestionTutorias" class="section">
+        <h1>Gestión de Tutorías</h1>
+        <p>Aquí se podrán gestionar las tutorías programadas.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/docente.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* Fondo general */
+body {
+  background: linear-gradient(to bottom, #0c2e45, #144d68, #1e6b8f); /* Degradado en tonos azulados */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin: 0;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  width: 100%;
+  max-width: 500px; /* Ancho máximo del formulario */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente para el formulario */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para el formulario */
+  text-align: center;
+}
+
+/* Título de la aplicación */
+.main-title {
+  position: absolute;
+  top: 20px; /* Posición desde la parte superior */
+  left: 50%;
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  text-align: center;
+}
+
+.main-title h1 {
+  font-size: 36px;
+  font-weight: 700; /* Negrita */
+  color: white; /* Color blanco para el título */
+}
+
+/* Estilos del formulario */
+.form-login h4 {
+  font-size: 24px;
+  font-weight: 700; /* Negrita */
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff; /* Color blanco para los títulos del formulario */
+}
+
+.controls {
+  width: calc(100% - 20px); /* Ajusta el ancho de los campos al contenedor */
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #1f53c5; /* Borde azul */
+  border-radius: 5px;
+  background: #24303c; /* Fondo oscuro para los campos */
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box; /* Incluye padding y bordes en el ancho */
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.controls:focus {
+  border-color: #3a6df0; /* Borde azul más claro al enfocar */
+  background-color: #2c3e50; /* Fondo ligeramente más claro */
+}
+
+.controls::placeholder {
+  color: #a9a9a9; /* Color gris para el texto placeholder */
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.controls:focus::placeholder {
+  opacity: 0.5;
+}
+
+select.controls {
+  background: #24303c;
+  color: white;
+  cursor: pointer;
+}
+
+/* Botón inferior */
+.button-group-bottom {
+  margin-top: 20px;
+}
+
+.button-group-bottom .botons {
+  width: 100%;
+  background: #1f53c5; /* Fondo azul para el botón */
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white; /* Color blanco para el texto del botón */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-group-bottom .botons:hover {
+  background-color: #3a6df0; /* Color azul más claro al pasar el mouse */
+}
+
+/* Texto para volver al inicio de sesión */
+.create-account-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffffff; /* Color blanco */
+}
+
+.create-account-text a {
+  color: #3a6df0; /* Color azul claro */
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.create-account-text a:hover {
+  text-decoration: underline;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

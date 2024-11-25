@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Estudiante</title>
+  <link rel="stylesheet" href="../css/estudiante.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menú lateral -->
+    <nav class="sidebar">
+      <h3>Menú - BrainBuddies - ESTUDIANTE</h3>
+      <ul>
+        <li><button class="menu-btn" onclick="irATutorias()">Ir a Tutorías</button></li>
+      </ul>
+      <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+    </nav>
+  </div>
+  <script>
+    function irATutorias() {
+      window.location.href = "tutorias.html";
+    }
+
+    function logout() {
+      window.location.href = "seleccion inicio de sesion.html";
+    }
+  </script>
+</body>
+</html>

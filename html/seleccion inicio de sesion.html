@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - App de Tutorías</title>
+  <link rel="stylesheet" href="../css/login.css">
+  <script src="../js/general.js"></script>
+</head>
+
+<body>
+  <header class="main-title">
+    <h1>BrainBuddies - App de Tutorías</h1>
+  </header>
+  <div class="form-container">
+    <section class="form-login">      
+      <h4>Seleccione su Tipo de Usuario</h4>
+      <select class="controls" name="tipo_cuenta" id="tipo_cuenta">
+        <option value="">Seleccione el tipo de cuenta</option>
+        <option value="administrador">Administrador</option>
+        <option value="usuario">Estudiante</option>
+        <option value="tutor">Tutor</option>
+      </select>
+      <div class="button-group-bottom">
+        <button class="botons" type="button" onclick="handleRedirection()">Iniciar Sesión</button>
+      </div>
+      
+      <p class="create-account-text">¿No tienes cuenta? <a href="seleccion registro.html">Crea una</a></p>
+    </section>
+  </div>
+</body>
+</html>

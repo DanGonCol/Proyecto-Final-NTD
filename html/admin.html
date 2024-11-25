@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrador</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menú lateral -->
+    <nav class="sidebar">
+      <h3>Menú - BrainBuddies - ADMIN</h3>
+      <ul>
+        <li><a href="#" onclick="showSection('gestionUsuarios')">Gestión de Usuarios</a></li>
+        <li><a href="#" onclick="showSection('gestionTutores')">Gestión de Tutores</a></li>
+        <li><a href="#" onclick="showSection('gestionTutorias')">Gestión de Tutorías</a></li>
+      </ul>
+      <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+    </nav>
+
+    <!-- Contenido dinámico -->
+    <main class="content">
+      <section id="gestionUsuarios" class="section">
+        <h1>Gestión de Usuarios</h1>
+        <div class="crud-actions">
+          <button onclick="getEstudiantes()">Listar Usuarios</button>
+          <button onclick="showEditForm()">Actualizar Usuario</button>
+          <button onclick="deleteEstudiante()">Eliminar Usuario</button>
+        </div>
+        <div id="estudiantesResult"></div>
+      
+        <!-- Formulario para modificar un usuario -->
+        <div id="editUserForm" class="form-container" style="display: none;">
+          <h4>Modificar Usuario</h4>
+          <input id="editUserId" type="text" class="controls" placeholder="ID del Usuario (solo lectura)" readonly />
+          <input id="editUserNombre" type="text" class="controls" placeholder="Nombre" />
+          <input id="editUserApellido" type="text" class="controls" placeholder="Apellido" />
+          <input id="editUserEmail" type="email" class="controls" placeholder="Correo" />
+          <input id="editUserTelefono" type="text" class="controls" placeholder="Teléfono (opcional)" />
+          <div class="button-group-bottom">
+            <button class="botons" onclick="updateEstudiante()">Guardar Cambios</button>
+          </div>
+        </div>
+      </section>
+      
+      <section id="gestionTutores" class="section">
+        <h1>Gestión de Tutores</h1>
+        <div class="crud-actions">
+          <button onclick="getDocentes()">Listar Tutores</button>
+          <button onclick="updateDocente()">Actualizar Tutor</button>
+          <button onclick="deleteDocente()">Eliminar Tutor</button>
+        </div>
+        <div id="docentesResult"></div>
+      </section>
+      
+      <section id="gestionTutorias" class="section">
+        <h1>Gestión de Tutorías</h1>
+        <div class="crud-actions">
+          <button onclick="getTutorias()">Listar Tutorías</button>
+          <button onclick="createTutoria()">Registrar Tutoría</button>
+          <button onclick="updateTutoria()">Actualizar Tutoría</button>
+          <button onclick="deleteTutoria()">Eliminar Tutoría</button>
+        </div>
+        <div id="tutoriasResult"></div>
+      </section>
+      
+    </main>
+  </div>
+
+  <script src="../js/admin.js"></script>
+</body>
+</html>

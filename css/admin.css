@@ -1,0 +1,166 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #0c2e45, #144d68, #1e6b8f); /* Fondo degradado */
+  color: white;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Menú lateral */
+.sidebar {
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra lateral */
+}
+
+.sidebar h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #24303c; /* Fondo oscuro para los enlaces */
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #1f53c5; /* Azul principal al pasar el mouse */
+}
+
+/* Botón de cierre de sesión */
+.logout-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px; /* Espaciado entre el botón y los enlaces */
+  border: none;
+  border-radius: 5px;
+  background-color: #24303c; /* Fondo oscuro */
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #1f53c5; /* Azul claro al pasar el mouse */
+}
+
+/* Contenido principal */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido para el contenido */
+  color: white;
+}
+
+/* Secciones del contenido */
+.section {
+  display: none; /* Ocultar secciones por defecto */
+}
+
+.section.active {
+  display: block; /* Mostrar solo la sección activa */
+}
+
+.content h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #b8d8e4; /* Texto ligeramente más claro */
+}
+
+/* Botones de CRUD */
+.crud-actions button {
+  width: auto;
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #24303c; /* Fondo oscuro */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.crud-actions button:hover {
+  background-color: #1f53c5; /* Azul claro al pasar el mouse */
+}
+
+/* Estilo para las tablas */
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto; /* Habilita el scroll horizontal si es necesario */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro para la tabla */
+  color: white;
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #1f53c5; /* Borde azul */
+}
+
+.table th {
+  background: #1f53c5; /* Fondo azul para el encabezado */
+  color: white;
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background: #24303c; /* Fondo alterno para las filas pares */
+}
+
+.table tr:hover {
+  background: #3a6df0; /* Fondo azul claro al pasar el mouse */
+}
