@@ -153,3 +153,7 @@ function getEstudiantes() {
     document.getElementById('editUserForm').style.display = 'none';
   }
   
+  // Logout
+  function logout() {
+    window.location.href = "/html/seleccion inicio de sesion.html";
+  }

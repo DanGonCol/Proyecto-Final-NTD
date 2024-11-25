@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Reportes</title>
+  <link rel="stylesheet" href="/css/styles_general.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menú lateral -->
+    <nav class="sidebar">
+      <h3>Menú - BrainBuddies - ADMIN</h3>
+      <ul>
+        <li><a href="/html/admin/estudiante.html">Gestión de Usuarios</a></li>
+        <li><a href="/html/admin/tutor.html">Gestión de Tutores</a></li>
+        <li><a href="/html/admin/tutoria.html">Gestión de Tutorías</a></li>
+        <li><a href="/html/admin/impresion.html">Gestión de Reportes</a></li>
+        
+      </ul>
+      <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="content">
+      <section id="gestionUsuarios">
+        <h1>Gestión de Reportes</h1>
+        <div class="button-group-bottom">
+            <button class="botons" onclick="generarPDF()">Impresión</button>
+          </div>
+        <div class="crud-actions">
+        </div>
+        <div id="estudiantesResult" class="table-container"></div>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="/js/admin/impresion.js"></script>
+</body>
+</html>

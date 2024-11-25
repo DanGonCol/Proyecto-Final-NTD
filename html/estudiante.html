@@ -1,30 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menú Estudiante</title>
-  <link rel="stylesheet" href="../css/estudiante.css">
-</head>
+  <title>Gestión de Tutorías</title>
+  <link rel="stylesheet" href="/css/styles_general.css">
 <body>
   <div class="container">
     <!-- Menú lateral -->
     <nav class="sidebar">
-      <h3>Menú - BrainBuddies - ESTUDIANTE</h3>
+      <h3>Menú - BrainBuddies - Estudiante</h3>
       <ul>
-        <li><button class="menu-btn" onclick="irATutorias()">Ir a Tutorías</button></li>
+        
       </ul>
       <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
     </nav>
-  </div>
-  <script>
-    function irATutorias() {
-      window.location.href = "tutorias.html";
-    }
 
-    function logout() {
-      window.location.href = "seleccion inicio de sesion.html";
-    }
-  </script>
+    <!-- Contenido dinámico -->
+    <main class="content">
+      <section id="gestionTutorias">
+        <h1>Gestión de Tutorías</h1>
+        <div class="crud-actions">
+          <button onclick="getTutorias()">Listar Tutorías</button>
+          <button onclick="showTutoriaForm()">Registrar Tutoría</button>
+          <button onclick="updateTutoria()">Actualizar Tutoría</button>
+          <button onclick="deleteTutoria()">Eliminar Tutoría</button>
+        </div>
+        <div id="tutoriasResult" class="table-container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Estudiante</th>
+                <th>Tutor</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Tema</th>
+                <th>Ubicación</th>
+              </tr>
+            </thead>
+            <tbody id="tutoriasTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="/js/admin/tutoria.js"></script>
 </body>
 </html>

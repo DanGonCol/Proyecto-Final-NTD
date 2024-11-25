@@ -1,36 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Docente</title>
-  <link rel="stylesheet" href="../css/docente.css">
-</head>
+  <title>Gestión de Tutorías</title>
+  <link rel="stylesheet" href="/css/styles_general.css">
 <body>
   <div class="container">
     <!-- Menú lateral -->
     <nav class="sidebar">
       <h3>Menú - BrainBuddies - TUTOR</h3>
-      <ul>
-        <li><a href="#" onclick="showSection('gestionCobros')">Gestión de Cobros</a></li>
-        <li><a href="#" onclick="showSection('gestionTutorias')">Gestión de Tutorías</a></li>
-      </ul>
+      
       <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
     </nav>
 
     <!-- Contenido dinámico -->
     <main class="content">
-      <section id="gestionCobros" class="section active">
-        <h1>Gestión de Cobros</h1>
-        <p>Aquí se podrán gestionar los cobros realizados.</p>
-      </section>
-      <section id="gestionTutorias" class="section">
+      <section id="gestionTutorias">
         <h1>Gestión de Tutorías</h1>
-        <p>Aquí se podrán gestionar las tutorías programadas.</p>
+        <div class="button-group">
+          <button class="botons" onclick="getTutorias()">Listar Tutorías</button>
+          <button class="botons" onclick="imprimirTutorias()">Impresión</button>
+          <button class="botons" onclick="getEstudiantes()">Listar Estudiantes</button>
+        </div>
+        <div class="table-container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Estudiante</th>
+                <th>Tutor</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+              </tr>
+            </thead>
+            <tbody id="tutoriasTableBody">
+              <!-- Aquí se llenarán los datos dinámicamente -->
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
   </div>
-
-  <script src="../js/docente.js"></script>
+  <script src="/js/admin/docente.js"></script>
 </body>
 </html>

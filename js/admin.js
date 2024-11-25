@@ -1,6 +1,6 @@
 // Logout
 function logout() {
-  window.location.href = "seleccion inicio de sesion.html";
+  window.location.href = "/html/seleccion inicio de sesion.html";
 }
 
 // Registrar administrador
