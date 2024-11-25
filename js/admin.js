@@ -1,4 +1,4 @@
-// Logout
+
 function logout() {
   window.location.href = "/html/seleccion inicio de sesion.html";
 }
